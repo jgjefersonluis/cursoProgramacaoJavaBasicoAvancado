@@ -19,7 +19,7 @@ package br.com.geekuniversity.secao12;
 * todos os atributos e metodos da classe herdada.
 */
 
-public class Aluno extends Pessoa {
+public  class Aluno extends Pessoa {
 
 	private String ra;
 
@@ -44,6 +44,11 @@ public class Aluno extends Pessoa {
 	// overriding -> sobrescrita de metodo
 	public String getNome() {
 		return "Aluno: \n" + super.getNome();
+	}
+
+	@Override
+	public void outra_mensagem(String texto) {
+		System.out.println(texto);
 	}
 
 }
