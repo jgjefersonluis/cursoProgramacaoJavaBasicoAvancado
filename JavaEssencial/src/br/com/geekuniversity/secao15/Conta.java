@@ -2,8 +2,8 @@ package br.com.geekuniversity.secao15;
 
 public class Conta {
 
-	private int numero;
-	private String cliente;
+	public int numero;
+	public String cliente;
 
 	public static int contador = 1;
 

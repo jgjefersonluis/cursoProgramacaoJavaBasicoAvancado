@@ -25,6 +25,7 @@ public class Conta { // sempre public
 	public void sacar(float valor) {
 		if (valor <= (this.saldo)) {
 			this.saldo = (this.saldo - valor);
+			
 		} else if (valor <= (this.saldo + this.limite)) {
 			float val_ret = this.saldo - valor;
 			if (val_ret < 0) {
@@ -32,10 +33,17 @@ public class Conta { // sempre public
 			}
 			val_ret = this.limite + val_ret;
 			this.limite = val_ret;
+			System.out.println("Saque realizado com sucesso!");
 		} else {
 			System.out.println("Saldo insuficiente.");
 		}
+		
 	}
+	
+	/**
+	 * Metodo getter do atributo Saldo
+	 * @return a soma do saldo + limite
+	 */
 
 	public float getSaldo() {
 		return this.saldo + this.getLimite();
