@@ -25,7 +25,7 @@ public class Conta { // sempre public
 	public void sacar(float valor) {
 		if (valor <= (this.saldo)) {
 			this.saldo = (this.saldo - valor);
-			
+
 		} else if (valor <= (this.saldo + this.limite)) {
 			float val_ret = this.saldo - valor;
 			if (val_ret < 0) {
@@ -37,11 +37,12 @@ public class Conta { // sempre public
 		} else {
 			System.out.println("Saldo insuficiente.");
 		}
-		
+
 	}
-	
+
 	/**
 	 * Metodo getter do atributo Saldo
+	 * 
 	 * @return a soma do saldo + limite
 	 */
 
@@ -55,6 +56,22 @@ public class Conta { // sempre public
 
 	public float getLimite() {
 		return limite;
+	}
+
+	@Override
+	public String toString() {
+		return "O saldo da conta é " + this.getSaldo();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Conta)) {
+			return false;
+		} else {
+			Conta verificar = (Conta) obj; // cast
+			return verificar.getSaldo() == this.getSaldo();
+		}
+
 	}
 
 }
