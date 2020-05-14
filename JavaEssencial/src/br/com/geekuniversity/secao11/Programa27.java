@@ -11,12 +11,12 @@ package br.com.geekuniversity.secao11;
 public class Programa27 {
 
 	public static void main(String[] args) {
-		Cliente cli1 = new Cliente("Felicity Jones. ", "Rua Qualquer, 123");
+		Cliente cli1 = new Cliente(45, "Felicity Jones. ", "Rua Qualquer, 123");
 		System.out.println();
 		System.out.println("Nome: " + cli1.getNome());
 		System.out.println("Endereço: " + cli1.getEndereco());
 		System.out.println();
-		Cliente cli2 = new Cliente("Angelina Jolie. ", "Rua Outra, 345");
+		Cliente cli2 = new Cliente(12, "Angelina Jolie. ", "Rua Outra, 345");
 		System.out.println();
 		System.out.println("Nome: " + cli2.getNome());
 		System.out.println("Endereço: " + cli2.getEndereco());
