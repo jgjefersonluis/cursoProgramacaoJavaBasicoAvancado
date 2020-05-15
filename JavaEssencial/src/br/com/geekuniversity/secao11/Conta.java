@@ -51,7 +51,10 @@ public class Conta { // sempre public
 	}
 
 	public void depositar(float valor) {
-		this.saldo = this.saldo + valor;
+		synchronized (this) {
+			this.saldo = this.saldo + valor;
+		}
+
 	}
 
 	public float getLimite() {
